@@ -20,7 +20,7 @@ jobs:
           port: 22
           key: ${{ secrets.AZ_SSH_KEY }}
           source: "myapp"
-          target: "/home/ubuntu/Accuknox-DevOps-trainee/"
+          target: "/home/azureuser/Accuknox-DevOps-trainee/"
 
           overwrite: true
       
