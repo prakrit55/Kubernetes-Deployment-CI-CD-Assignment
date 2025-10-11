@@ -15,10 +15,10 @@ jobs:
       - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ubuntu
+          host: ${{ secrets.AZ_HOST }}
+          username: azureuser
           port: 22
-          key: ${{ secrets.EC2_SSH_KEY }}
+          key: ${{ secrets.AZ_SSH_KEY }}
           source: "myapp"
           target: "/home/ubuntu/Accuknox-DevOps-trainee/"
 
@@ -27,10 +27,10 @@ jobs:
       - name: Deploy with Helm
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ubuntu
+          host: ${{ secrets.AZ_HOST }}
+          username: azureuser
           timeout: 3m  
-          key: ${{ secrets.EC2_SSH_KEY }}
+          key: ${{ secrets.AZ_SSH_KEY }}
           script: |
             cd Accuknox-DevOps-trainee/myapp
             if helm upgrade --install myapp . -f values.yaml --wait --timeout=2m; then
