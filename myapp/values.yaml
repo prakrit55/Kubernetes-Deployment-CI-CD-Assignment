@@ -5,7 +5,7 @@
 replicaCount: 1
 workload:
   image: ghcr.io/prakrit55/kubernetes-deployment-ci-cd-assignment/workload
-  tag: "aaf9bf9"
+  tag: "877a82a"
   replicaCount: 1
   containerPort: 4499
 imagePullSecrets: []
