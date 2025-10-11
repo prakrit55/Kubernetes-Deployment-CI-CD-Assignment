@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bash-script-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bash-script
+  template:
+    metadata:
+      labels:
+        app: bash-script
+    spec:
+      containers:
+        - name: bash-script-container
+          image: my-bash-app:latest
+          ports:
+            - containerPort: 4499
