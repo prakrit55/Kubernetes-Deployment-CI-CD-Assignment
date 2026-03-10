@@ -1,7 +1,5 @@
 # Kubernetes-Deployment-CI-CD-Assignment
 
-# Accuknox-DevOps-trainee Tasks
-
 ## Task - 01 ( Title: Containerisation and Deployment of Wisecow Application on Kubernetes )
 
 ## Task - 02
